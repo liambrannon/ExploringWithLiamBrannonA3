@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LOGIN or REGISTER for the EWLB newsletter!"
+    />
+
+    <title>About Liam Brannon</title>
+    <link rel="icon" href="images/LBfavicon.PNG" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="images/LBfavicon.PNG"
+        alt="Exploring with Liam Brannon LB letter logo"
+      />
+      <nav>
+        <ul class="nav_links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="clothing.html">STORE</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form class="signup" onsubmit="return validateForm()">
+        <label for="email">ENTER EMAIL:</label>
+        <input type="email" name="email" id="email" required />
+        <label for="password">ENTER PASSWORD:</label>
+        <input type="password" name="password" id="password" required />
+        <button type="submit">Login</button>
+      </form>
+    </main>
+    <hr />
+    <script>
+      function validateForm() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        if (email == "" || password == "") {
+          alert("Please fill in all fields.");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
